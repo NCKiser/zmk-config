@@ -1,0 +1,8 @@
+file_format: "1"
+id: qazpad
+name: QAZPAD
+type: shield
+url: https://www.kiserdesigns.com/product/qazpad
+requires: [pro_micro]
+features:
+  - keys
