@@ -4,6 +4,6 @@
 if SHIELD_QAZPAD
 
 config ZMK_KEYBOARD_NAME
-    default "QAZPAD"
+    default "QAZpad"
 
 endif
