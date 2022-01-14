@@ -14,17 +14,11 @@
 #define L_LYR   2
 #define FUNC    3
 
-/ {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
-            #binding-cells = <2>;
-            tapping-term-ms = <225>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
+&mt {
+    tapping-term-ms = <200>; 
+};
+&lt {
+    quick-tap-ms = <400>;
 };
 
 / {
