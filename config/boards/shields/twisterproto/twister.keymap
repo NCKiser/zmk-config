@@ -29,26 +29,26 @@
             bindings = <
     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       
     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp RET     
-    &mt LSHFT Z &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &mt RSHFT COMMA         &kp UP      &kp DOT
-    &kp LCTRL   &kp LGUI    &kp LALT          &lt L_LYR BSPC          &lt R_LYR SPACE   &mo FUNC    &kp LEFT    &kp DOWN    &kp RIGHT
+    &mt LSHFT Z &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp UP      &mt RSHFT DOT
+    &kp LCTRL   &kp LGUI    &kp LALT    &none     &lt L_LYR BSPC  &lt R_LYR SPACE  &lt FUNC LEFT    &kp DOWN    &kp RIGHT
             >;
         };
 	
         right_layer {
             bindings = <
     &trans      &trans      &trans      &trans      &trans      &trans      &kp LBKT    &kp RBKT    &kp EQUAL   &kp MINUS        
-    &trans      &trans      &trans      &trans      &trans      &trans      &kp GRAVE   &kp SEMI    &kp SQT     &kp DEL           
-    &trans      &trans      &trans      &trans      &trans      &trans      &kp BSLH    &kp SLASH               &trans      &trans 
-    &trans      &trans      &trans            &trans                  &trans            &trans      &trans      &trans      &trans    
+    &kc F1      &kc F2      &kc F3      &kc F4      &kc F5      &kc F6      &kp GRAVE   &kp SEMI    &kp SQT     &kp DEL           
+    &kc F7      &kc F8      &kc F9      &kc F10     &kc F11     &kc F12     &trans      &kp BSLH    &trans      &mt RSHFT SLASH
+    &trans      &trans      &trans      &trans         &trans          &trans           &trans      &trans      &trans    
             >;
         };
 
     	left_layer {
             bindings = <
-    &kp ESC     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans    
-    &kp TAB     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     
-    &kp LSHFT   &trans      &trans      &trans      &trans      &trans      &trans      &trans                  &trans      &kp F1        
-    &trans      &trans      &trans            &trans                  &trans            &trans      &trans      &trans      &kp F10   
+    &kp ESC     &trans      &trans      &trans      &trans      &trans      &trans      &kc N7      &kc N8      &kc N9    
+    &kp TAB     &trans      &trans      &trans      &trans      &trans      &trans      &kc N4      &kc N5      &kc N6     
+    &kp LSHFT   &trans      &trans      &trans      &trans      &trans      &trans      &kc N1      &kc N2      &kc N3        
+    &trans      &trans      &trans      &trans         &trans          &trans           &trans      &kc N0      &kc DOT   
             >;
         };
 
@@ -57,7 +57,7 @@
     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &bootloader     
     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &bt BT_SEL 4 &bt BT_SEL 5 &out OUT_TOG     
     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3      
-    &trans      &trans      &trans            &trans                  &trans            &trans      &trans      &bt BT_CLR  &reset  
+    &trans      &trans      &trans      &trans         &trans          &trans           &trans      &bt BT_CLR  &reset  
             >;
         };
     };
