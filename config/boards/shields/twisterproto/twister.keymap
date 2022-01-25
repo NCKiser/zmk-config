@@ -37,18 +37,18 @@
         right_layer {
             bindings = <
     &trans      &trans      &trans      &trans      &trans      &trans      &kp LBKT    &kp RBKT    &kp EQUAL   &kp MINUS        
-    &kc F1      &kc F2      &kc F3      &kc F4      &kc F5      &kc F6      &kp GRAVE   &kp SEMI    &kp SQT     &kp DEL           
-    &kc F7      &kc F8      &kc F9      &kc F10     &kc F11     &kc F12     &trans      &kp BSLH    &trans      &mt RSHFT SLASH
+    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp GRAVE   &kp SEMI    &kp SQT     &kp DEL           
+    &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12     &trans      &kp BSLH    &trans      &mt RSHFT SLASH
     &trans      &trans      &trans      &trans         &trans          &trans           &trans      &trans      &trans    
             >;
         };
 
     	left_layer {
             bindings = <
-    &kp ESC     &trans      &trans      &trans      &trans      &trans      &trans      &kc N7      &kc N8      &kc N9    
-    &kp TAB     &trans      &trans      &trans      &trans      &trans      &trans      &kc N4      &kc N5      &kc N6     
-    &kp LSHFT   &trans      &trans      &trans      &trans      &trans      &trans      &kc N1      &kc N2      &kc N3        
-    &trans      &trans      &trans      &trans         &trans          &trans           &trans      &kc N0      &kc DOT   
+    &kp ESC     &trans      &trans      &trans      &trans      &trans      &trans      &kp N7      &kp N8      &kp N9    
+    &kp TAB     &trans      &trans      &trans      &trans      &trans      &trans      &kp N4      &kp N5      &kp N6     
+    &kp LSHFT   &trans      &trans      &trans      &trans      &trans      &trans      &kp N1      &kp N2      &kp N3        
+    &trans      &trans      &trans      &trans         &trans          &trans           &trans      &kp N0      &kp DOT   
             >;
         };
 
