@@ -20,5 +20,5 @@ include:
 #  - board: nice_nano_v2
 #    shield: twister
 #  - board: ble_chiffre
-- board: nrfmicro_13
-  shield: settings_reset
+  - board: nrfmicro_13
+    shield: settings_reset
