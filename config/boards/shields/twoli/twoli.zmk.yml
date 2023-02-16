@@ -1,0 +1,10 @@
+file_format: "1"
+id: twoli
+name: Twoli
+type: shield
+url: https://kiserdesigns.com
+requires:
+  - seeedstudio_xiao_ble
+features:
+  - keys
+  - display
