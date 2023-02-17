@@ -36,7 +36,7 @@
 
 &xiao_i2c {
 	status = "okay";
-	clock-frequency = <1000000>;
+	clock-frequency = <I2C_SPEED_STANDARD>;
 
 	oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
