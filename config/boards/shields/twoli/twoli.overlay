@@ -34,22 +34,19 @@
 
 };
 
-&i2c0 {
-	status = "okay";
-	
-	oled: ssd1306@3c {
+&xiao_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
+        reg = <0x3C>;
         label = "DISPLAY";
         width = <128>;
         height = <64>;
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <31>;
-        segment-remap;
-        com-invdir;
-        com-sequential;
+        multiplex-ratio = <63>;
         prechargep = <0x22>;
-	};
+    };
 };
