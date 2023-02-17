@@ -5,6 +5,9 @@ type: shield
 url: https://kiserdesigns.com
 requires:
   - seeedstudio_xiao_ble
+exposes:
+  - i2c_oled
 features:
   - keys
   - display
+  - encoder
