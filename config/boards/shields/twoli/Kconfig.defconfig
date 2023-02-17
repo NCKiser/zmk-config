@@ -18,10 +18,6 @@ endif # ZMK_DISPLAY
 
 if LVGL
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 endif # LVGL
 
 endif # SHIELD_TWOLI
