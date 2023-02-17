@@ -1,3 +1,4 @@
+if SHIELD_TWOLI
 
 config ZMK_KEYBOARD_NAME
     default "Twoli"
@@ -17,6 +18,12 @@ endif # ZMK_DISPLAY
 
 if LVGL
 
+config LVGL_HOR_RES_MAX
+	default 128
+
+config LVGL_VER_RES_MAX
+	default 64
+	
 config LVGL_VDB_SIZE
   default 64
 
@@ -31,3 +38,5 @@ choice LVGL_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+endif # SHIELD_TWOLI
