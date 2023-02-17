@@ -37,6 +37,7 @@
 		sensors = <&left_encoder>;
 	};
 };
+
 &xiao_i2c {
     status = "okay";
 
@@ -52,4 +53,8 @@
         multiplex-ratio = <63>;
         prechargep = <0x22>;
     };
+};
+
+&left_encoder {
+    status = "okay";
 };
