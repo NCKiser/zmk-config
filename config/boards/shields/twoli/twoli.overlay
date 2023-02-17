@@ -34,9 +34,9 @@
 
 };
 
-&i2c1 {
+&i2c0 {
 	status = "okay";
-
+	clock-frequency = <10001000>;
 	oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
