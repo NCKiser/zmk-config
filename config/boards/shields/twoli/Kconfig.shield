@@ -1,2 +1,3 @@
 config SHIELD_TWOLI
     def_bool $(shields_list_contains,twoli)
+    
