@@ -4,7 +4,7 @@ name: Twoli
 type: shield
 url: https://kiserdesigns.com
 requires:
-  - seeedstudio_xiao_ble
+  - seeeduino_xiao_ble
 exposes:
   - i2c_oled
 features:
