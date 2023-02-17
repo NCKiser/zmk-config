@@ -34,7 +34,7 @@
 
 };
 
-&i2c0 {
+&i2c1 {
 	status = "okay";
 	
 	oled: ssd1306@3c {
