@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
+    - name: NCKiser
       url-base: https://github.com/NCKiser
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: NCKiser
       revision: main
       import: app/west.yml
   self:
