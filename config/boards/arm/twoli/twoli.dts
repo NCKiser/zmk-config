@@ -26,11 +26,11 @@
         diode-direction = "col2row";
 
         col-gpios
-            = <&xiao_d 0 GPIO_ACTIVE_HIGH>
+            = <&gpio 0 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&gpio 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
@@ -46,8 +46,8 @@
     encoder: encoder {
 		compatible = "alps,ec11";
 		label = "ENCODER";
-		a-gpios = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		b-gpios = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		a-gpios = <&gpio 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		resolution = <4>;
 		status = "enabled";
 	};
@@ -63,7 +63,7 @@
 	status = "okay";
 };
 
-&xiao_i2c {
+&i2c {
     status = "okay";
 
     oled: ssd1306@3c {
