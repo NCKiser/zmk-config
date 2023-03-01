@@ -10,7 +10,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "TW_BOARD";
+            label = " TWOLI";
             bindings = <
                 &kp ESC
             >;
