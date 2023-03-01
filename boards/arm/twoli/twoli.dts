@@ -1,0 +1,89 @@
+/*
+ * Copyright (c) 2023 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+
+/ {
+	chosen {
+		zephyr,console = &cdc_acm_uart;
+		zmk,battery = &vbatt;
+
+        zephyr,display = &oled;
+        zmk,kscan = &kscan0;
+	};
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
+
+        col-gpios
+            = <&xiao_d 0 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+
+	vbatt: vbatt {
+		compatible = "zmk,battery-voltage-divider";
+		label = "BATTERY";
+		io-channels = <&adc 7>;
+		power-gpios = <&gpio0 14 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
+		output-ohms = <510000>;
+		full-ohms = <(1000000 + 510000)>;
+	};
+
+    encoder: encoder {
+		compatible = "alps,ec11";
+		label = "ENCODER";
+		a-gpios = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		resolution = <4>;
+		status = "enabled";
+	};
+	
+	sensors {
+		compatible = "zmk,keymap-sensors";
+		sensors = <&encoder>;
+	};
+
+};
+
+&adc {
+	status = "okay";
+};
+
+&xiao_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3C>;
+        label = "DISPLAY";
+        width = <128>;
+        height = <64>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+	com-invdir;
+    	segment-remap;
+    	//com-sequential;
+        prechargep = <0x22>;
+    };
+};
+
+&usbd {
+	cdc_acm_uart: cdc_acm_uart {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};
+
+&encoder {
+    status = "okay";
+};
