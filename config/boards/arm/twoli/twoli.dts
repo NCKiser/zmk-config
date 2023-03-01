@@ -3,9 +3,15 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
+ 
+/dts-v1/;
+#include <nordic/nrf52840_qiaa.dtsi>
 
 / {
+
+	model = "twoli";
+	compatible = "twoli";
+
 	chosen {
 		zephyr,console = &cdc_acm_uart;
 		zmk,battery = &vbatt;
