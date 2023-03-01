@@ -14,7 +14,7 @@
                 &kp N7 &kp N8 &kp N9 &kp C_MUTE
                 &kp N4 &kp N5 &kp N6 &none
                 &kp N1 &kp N2 &kp N3 &none
-                &kp N0 &to 1  &bootloader &none
+                &kp N0 &kp DOT &mo 1 &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -23,10 +23,10 @@
         layer_1 {
             label = "BT";
             bindings = <
-                &bt BT_CLR &bt BT_NXT &out OUT_TOG &kp ESC
-                &trans &trans &trans &none
-                &trans &trans &trans &none
-                &to 0  &trans &reset &none
+                &bootloader  &trans &trans &kp ESC
+                &out OUT_TOG &trans &kp RET &none
+                &bt BT_CLR   &trans &reset &none
+                &bt BT_NXT   &trans &trans &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
