@@ -9,4 +9,4 @@ toolchain:
 ram: 256
 flash: 1024
 supported:
-  - xiao_serial
+  - xiao_i2c

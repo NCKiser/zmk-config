@@ -10,8 +10,8 @@ CONFIG_ARM_MPU=y
 # enable GPIO
 CONFIG_GPIO=y
 
-# enable uart driver
-CONFIG_SERIAL=y
+# disable uart driver
+CONFIG_SERIAL=n
 
 # enable console
 CONFIG_CONSOLE=y

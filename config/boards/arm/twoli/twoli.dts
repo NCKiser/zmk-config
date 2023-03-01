@@ -230,4 +230,3 @@ zephyr_udc0: &usbd {
 
 xiao_spi: &spi2 {};
 xiao_i2c: &i2c0 {};
-xiao_serial: &uart0 {};
