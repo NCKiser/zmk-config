@@ -8,5 +8,5 @@ toolchain:
   - xtools
 ram: 256
 flash: 1024
-#supported:
-#  - xiao_serial
+supported:
+  - xiao_serial

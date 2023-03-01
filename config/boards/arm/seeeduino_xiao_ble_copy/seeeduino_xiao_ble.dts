@@ -9,7 +9,7 @@
 #include "seeed_xiao_connector.dtsi"
 
 / {
-	model = "Seeeduino XIAO BLE";
+	model = "Seeeduino XIAO BLE Copy";
 	compatible = "seeed,xiao_ble";
 
 	chosen {
