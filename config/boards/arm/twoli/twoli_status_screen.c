@@ -34,14 +34,10 @@ static struct zmk_widget_layer_status layer_status_widget;
 static struct zmk_widget_wpm_status wpm_status_widget;
 #endif
 
-lv_style_t global_style;
-
 lv_obj_t *zmk_display_status_screen() {
     lv_obj_t *screen;
 
     screen = lv_obj_create(NULL, NULL);
-    
-    lv_obj_add_style(screen, LV_OBJ_PART_MAIN, &global_style);
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_BATTERY_STATUS)
     zmk_widget_battery_status_init(&battery_status_widget, screen);
