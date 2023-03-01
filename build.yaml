@@ -13,4 +13,4 @@
 #
 ---
 include:
-  - board: twoli
+  - board: seeeduino_xiao_ble
