@@ -1,4 +1,15 @@
+# Twoli board configuration
+
+# Copyright (c) 2023 Noah Kiser
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD
+	default "twoli" if BOARD_TWOLI
+
 if BOARD_TWOLI
+
+config BT_CTLR
+	default BT
 
 config ZMK_KEYBOARD_NAME
     default "Twoli"
