@@ -3,7 +3,7 @@ id: twoli
 name: Twoli
 type: shield
 url: https://kiserdesigns.com
-requires: [twoli_board]
+requires: [seeed_xiao]
 exposes:
   - i2c_oled
 features:

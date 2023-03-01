@@ -7,4 +7,4 @@ outputs:
   - usb
   - ble
 url: https://wiki.seeedstudio.com/XIAO_BLE/
-exposes: [twoli_board]
+exposes: [seeed_xiao]
