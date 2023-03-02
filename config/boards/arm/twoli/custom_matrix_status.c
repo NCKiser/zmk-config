@@ -184,7 +184,7 @@ lv_obj_t *custom_widget_matrix_status_obj(struct custom_widget_matrix_status *wi
 }
 
 void set_matrix_state(struct custom_widget_matrix_status *widget, struct zmk_position_state_changed *ev) {
-    lv_obj_set_style_local_bg_color(btn1, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY);
+    lv_obj_set_style_local_bg_color(btn1, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 0) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY);
 }
 
 int matrix_status_listener(const zmk_event_t *eh) {
