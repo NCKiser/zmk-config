@@ -42,7 +42,8 @@ choice LVGL_THEME_DEFAULT_FONT_SMALL
 
 endchoice
 
-rsource "widgets/Kconfig"
+config LVGL_USE_LABEL
+	default y
 
 config I2C
 	default y
