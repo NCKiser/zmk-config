@@ -52,10 +52,11 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
         lv_obj_set_style_local_border_width(btn7, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 002);
 
         lv_obj_t* btn7a = lv_obj_create(top_half, NULL);
-        lv_obj_set_size(btn7a, 24, 16); 
+        lv_obj_set_size(btn7a, 20, 14); 
         lv_obj_align(btn7a, NULL, LV_ALIGN_IN_TOP_RIGHT, 0, 0);
-        lv_obj_set_style_local_border_width(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 002);
-        lv_obj_set_style_local_border_opa(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_0);
+        lv_obj_set_style_local_border_width(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 000);
+        lv_obj_set_style_local_pad_right(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 002);
+        lv_obj_set_style_local_pad_top(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 002);
     } else {
         lv_obj_t* btn1 = lv_obj_create(top_half, NULL);
         lv_obj_set_size(btn1, 16, 16); 
