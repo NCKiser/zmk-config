@@ -54,7 +54,7 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
         lv_obj_t* btn7a = lv_obj_create(top_half, NULL);
         lv_obj_set_size(btn7a, 20, 12); 
         lv_obj_set_style_local_border_width(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 000);
-        lv_obj_set_pos(obj, 26, 2)
+        lv_obj_set_pos(btn7a, 26, 2)
     } else {
         lv_obj_t* btn1 = lv_obj_create(top_half, NULL);
         lv_obj_set_size(btn1, 16, 16); 
