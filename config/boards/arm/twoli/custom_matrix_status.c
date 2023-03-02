@@ -27,3 +27,7 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
 
     return 0;
 }
+
+lv_obj_t *custom_widget_matrix_status_obj(struct custom_widget_matrix_status *widget) {
+    return widget->obj;
+}
