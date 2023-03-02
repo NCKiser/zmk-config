@@ -29,7 +29,7 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     lv_label_set_text(label, "->");
 
     lv_style_init(&style_btn);
-    lv_style_set_border_color(&style_btn, lv_color_black());
+    lv_style_set_border_color(&style_btn, LVGL_COLOR_WHITE);
     lv_style_set_border_width(&style_btn, 2);
 
     lv_obj_add_style(widget->obj, &style_btn, 0);
