@@ -16,6 +16,8 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
+static lv_style_t style_btn;
+
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
     widget->obj = lv_btn_create(parent, NULL);
 
@@ -25,6 +27,13 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     // set the text for the button label
     lv_obj_t* label = lv_label_create(widget->obj, NULL);
     lv_label_set_text(label, "->");
+
+    lv_style_init(&style_btn);
+    lv_style_set_radius(&style_btn, 5);
+    lv_style_set_border_color(&style_btn, lv_color_black());
+    lv_style_set_border_width(&style_btn, 2);
+
+    lv_obj_add_style(widget->obj, &style_btn, 0);
 
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
 
