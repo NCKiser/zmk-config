@@ -21,7 +21,7 @@ static struct custom_widget_battery_status custom_battery_status_widget;
 
 #if IS_ENABLED(CONFIG_CUSTOM_WIDGET_MATRIX_STATUS)
 #include "custom_matrix_status.h"
-static struct custom_widget_battery_status custom_battery_status_widget;
+static struct custom_widget_matrix_status custom_matrix_status_widget;
 #endif
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_BATTERY_STATUS)
