@@ -34,8 +34,10 @@ CONFIG_ZMK_BLE=y
 #Uncomment below to enable NFC pins for gpio0 9 and gpio0 10
 CONFIG_NFCT_PINS_AS_GPIOS=y
 
+CONFIG_CUSTOM_WIDGET_BATTERY_STATUS=y
+
 # Uncomment below to enable batt percentage
-CONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=y
+CONFIG_CUSTOM_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=y
 
 # Uncomment below to enable WPM status
 CONFIG_ZMK_WIDGET_WPM_STATUS=y	
