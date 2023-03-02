@@ -31,10 +31,12 @@ choice ZMK_DISPLAY_STATUS_SCREEN
 endchoice
 
 config CUSTOM_WIDGET_BATTERY_STATUS
+	bool "Use a custom battery status widget"
 	default y
 
 # Uncomment below to enable batt percentage
 config CUSTOM_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
+	bool "show batt percentage on custom batt widget"
 	default y
 
 config LVGL_FONT_MONTSERRAT_16
