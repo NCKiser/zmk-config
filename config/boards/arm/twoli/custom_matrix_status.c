@@ -17,7 +17,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
-    widget->obj = lv_label_create(parent, NULL);
+    widget->obj = lv_btn_create(parent, NULL);
     lv_obj_set_size(widget->obj, 48, 64);
 
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
