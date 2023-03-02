@@ -19,13 +19,13 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 static lv_style_t style_btn;
 
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
-    widget->obj = lv_cont_create(parent, NULL);
+    widget->obj = lv_btn_create(parent, NULL);
 
     lv_obj_set_size(widget->obj, 30, 12); 
 
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
 
-    lv_obj_set_style_color(widget->obj, LV_STYLE_BORDER_COLOR, LV_COLOR_FG)
+    //lv_obj_set_style_color(widget->obj, LV_STYLE_BORDER_COLOR, LV_COLOR_FG)
 
     sys_slist_append(&widgets, &widget->node);
 
