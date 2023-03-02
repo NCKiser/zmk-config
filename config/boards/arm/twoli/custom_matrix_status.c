@@ -26,11 +26,12 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     lv_obj_t* top_half = lv_obj_create(widget->obj, NULL);
     lv_obj_set_size(top_half, 48, 32); 
     lv_obj_align(top_half, NULL, LV_ALIGN_IN_TOP_MID, 0, 0);
-    lv_obj_set_style_local_border_color(top_half, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_PRIMARY)
+    lv_obj_set_style_local_border_color(top_half, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_PRIMARY);
 
     lv_obj_t* bottom_half = lv_obj_create(widget->obj, NULL);
     lv_obj_set_size(bottom_half, 48, 32); 
     lv_obj_align(bottom_half, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, 0);
+    lv_obj_set_style_local_border_color(bottom_half, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_SECONDARY);
 
     sys_slist_append(&widgets, &widget->node);
 
