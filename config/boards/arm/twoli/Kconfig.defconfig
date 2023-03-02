@@ -26,13 +26,25 @@ choice LVGL_TXT_ENC
 endchoice
 
 choice ZMK_DISPLAY_STATUS_SCREEN
-	default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+	default ZMK_DISPLAY_STATUS_SCREEN_CUSTOMDD
 
 endchoice
 
 config CUSTOM_WIDGET_MATRIX_STATUS
 	bool "Use the custom matrix status widget"
 	default y
+
+config MATRIX_LAYOUT_ISO
+	bool "ISO Enter on rows 0 and 1"
+	default n
+
+config MATRIX_LAYOUT_SHIFT
+	bool "1.25 and 1.75 Shifts on row 2"
+	default n
+
+config MATRIX_LAYOUT_BOTTOM
+	int "Bottom row layout: 1) 1-1-1 ; 2) 2.00-1 ; 3) 1.5-1.5"
+	default 1
 
 config CUSTOM_WIDGET_BATTERY_STATUS
 	bool "Use a custom battery status widget"
