@@ -15,7 +15,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/events/position_state_changed.h>
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
-static lv_obj_t* btn1;
+lv_obj_t* btn1;
 
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
     widget->obj = lv_obj_create(parent, NULL);
@@ -167,7 +167,7 @@ lv_obj_t *custom_widget_matrix_status_obj(struct custom_widget_matrix_status *wi
 void set_matrix_state(struct custom_widget_matrix_status *widget, struct zmk_position_state_changed *ev) {
     lv_obj_set_style_local_bg_color(btn1, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state && (ev->position == 0) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY);
 }
-6
+
 int matrix_status_listener(const zmk_event_t *eh) {
     struct custom_widget_matrix_status *widget;
     struct zmk_position_state_changed *ev = as_zmk_position_state_changed(eh);
