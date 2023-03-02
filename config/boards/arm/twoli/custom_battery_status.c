@@ -58,7 +58,7 @@ static void set_battery_symbol(lv_obj_t *label, struct battery_status_state stat
     lv_obj_align(label, NULL, LV_ALIGN_IN_LEFT_MID, 0, 0);
 }
 
-void battery_status_update_cb(struct battery_status_state state) {
+void custom_battery_status_update_cb(struct battery_status_state state) {
     struct custom_widget_battery_status *widget;
     SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_battery_symbol(widget->obj, state); }
 }
@@ -73,7 +73,7 @@ static struct battery_status_state battery_status_get_state(const zmk_event_t *e
 }
 
 ZMK_DISPLAY_WIDGET_LISTENER(c_widget_battery_status, struct battery_status_state,
-                            battery_status_update_cb, battery_status_get_state)
+                            custom_battery_status_update_cb, battery_status_get_state)
 
 ZMK_SUBSCRIPTION(c_widget_battery_status, zmk_battery_state_changed);
 #if IS_ENABLED(CONFIG_USB_DEVICE_STACK)
