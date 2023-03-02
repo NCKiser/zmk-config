@@ -20,11 +20,15 @@ config ZMK_DISPLAY_BLANK_ON_IDLE
     bool "Blank display on idle"
     default y
 
-config LVGL_TXT_ENC
+choice LVGL_TXT_ENC
     default LVGL_TXT_ENC_UTF8
 
-config ZMK_DISPLAY_STATUS_SCREEN
+endchoice
+
+choice ZMK_DISPLAY_STATUS_SCREEN
 	default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+
+endchoice
 
 config LVGL_FONT_MONTSERRAT_16
     default y
