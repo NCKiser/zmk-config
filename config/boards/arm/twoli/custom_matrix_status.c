@@ -23,7 +23,7 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     lv_obj_set_size(widget->obj, 30, 12); 
 
     // set the text for the button label
-    lv_obj_t* label = lv_label_create(btn, NULL);
+    lv_obj_t* label = lv_label_create(widget->obj, NULL);
     lv_label_set_text(label, "->");
 
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
