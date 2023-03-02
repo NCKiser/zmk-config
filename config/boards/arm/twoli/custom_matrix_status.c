@@ -95,7 +95,6 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
         lv_obj_set_size(btn11, 28, 16); 
         lv_obj_align(btn11, NULL, LV_ALIGN_IN_TOP_RIGHT, 0, 0);
         lv_obj_set_style_local_border_width(btn11, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 002);
-        lv_obj_set_style_local_bg_color(btn11, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_PRIMARY);
     } else {
         lv_obj_t* btn9 = lv_obj_create(bottom_half, NULL);
         lv_obj_set_size(btn9, 16, 16); 
@@ -111,7 +110,6 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
         lv_obj_set_size(btn11, 16, 16); 
         lv_obj_align(btn11, NULL, LV_ALIGN_IN_TOP_RIGHT, 0, 0);
         lv_obj_set_style_local_border_width(btn11, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 002);
-        lv_obj_set_style_local_bg_color(btn11, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_PRIMARY);
     }
     if (CONFIG_MATRIX_LAYOUT_BOTTOM == 1) {
         lv_obj_t* btn13 = lv_obj_create(bottom_half, NULL);
