@@ -16,17 +16,12 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
-static const char * btnm_map[] = {"", "", "", "\n",
-                                  "", "", "", "\n",
-                                  "", "", "", "\n",
-                                  "", "", ""};
-
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
-    widget->obj = lv_btnmatrix_create(lv_scr_act(), NULL);
-    lv_btnmatrix_set_map(widget->obj, btnm_map);
-    lv_obj_set_size(widget->obj, 43, 64);
-    lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
+    widget->obj = lv_btn_create(lv_scr_act(), NULL);
+    lv_obj_set_size(widget->obj, 48, 64);
 
+    lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
+    lv_btn_toggle(widget->obj);
     sys_slist_append(&widgets, &widget->node);
 
     return 0;
