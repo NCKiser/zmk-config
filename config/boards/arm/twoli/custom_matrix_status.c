@@ -19,7 +19,9 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
     widget->obj = lv_btn_create(parent, NULL);
     lv_obj_set_size(widget->obj, 48, 64);
-
+    lv_btn_set_checkable(widget->obj, true);
+    lv_btn_toggle(widget->obj);
+    lv_label_set_text(lv_label_create(widget->obj, NULL), "btn");
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
     sys_slist_append(&widgets, &widget->node);
 
