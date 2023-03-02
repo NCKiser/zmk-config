@@ -22,11 +22,37 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     lv_obj_set_size(widget->obj, 48, 64); 
 
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
+    lv_obj_set_style_local_border_color(widget->obj, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_SECONDARY);
 
     lv_obj_t* top_half = lv_obj_create(widget->obj, NULL);
     lv_obj_set_size(top_half, 48, 32); 
     lv_obj_align(top_half, NULL, LV_ALIGN_IN_TOP_MID, 0, 0);
-    lv_obj_set_style_local_border_color(top_half, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_PRIMARY);
+    lv_obj_set_style_local_border_color(top_half, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_SECONDARY);
+
+    lv_obj_t* btn1 = lv_obj_create(top_half, NULL);
+    lv_obj_set_size(btn1, 16, 16); 
+    lv_obj_align(btn1, NULL, LV_ALIGN_IN_TOP_LEFT, 0, 0);
+    
+    lv_obj_t* btn2 = lv_obj_create(top_half, NULL);
+    lv_obj_set_size(btn1, 16, 16); 
+    lv_obj_align(btn1, NULL, LV_ALIGN_IN_TOP_MID, 0, 0);
+    
+    lv_obj_t* btn3 = lv_obj_create(top_half, NULL);
+    lv_obj_set_size(btn1, 16, 16); 
+    lv_obj_align(btn1, NULL, LV_ALIGN_IN_TOP_RIGHT, 0, 0);
+    lv_obj_set_style_local_bg_color(btn3, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_PRIMARY);
+    
+    lv_obj_t* btn4 = lv_obj_create(top_half, NULL);
+    lv_obj_set_size(btn1, 16, 16); 
+    lv_obj_align(btn1, NULL, LV_ALIGN_IN_BOTTOM_LEFT, 0, 0);
+    
+    lv_obj_t* btn5 = lv_obj_create(top_half, NULL);
+    lv_obj_set_size(btn1, 16, 16); 
+    lv_obj_align(btn1, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, 0);
+    
+    lv_obj_t* btn6 = lv_obj_create(top_half, NULL);
+    lv_obj_set_size(btn1, 16, 16); 
+    lv_obj_align(btn1, NULL, LV_ALIGN_IN_BOTTOM_RIGHT, 0, 0);
 
     lv_obj_t* bottom_half = lv_obj_create(widget->obj, NULL);
     lv_obj_set_size(bottom_half, 48, 32); 
