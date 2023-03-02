@@ -39,12 +39,12 @@ config CUSTOM_WIDGET_MATRIX_STATUS
 	select LVGL_USE_BTNMATRIX
 
 config MATRIX_LAYOUT_ISO
-	bool "ISO Enter on rows 0 and 1"
-	default n
+	int "ISO Enter on rows 0 and 1, 0 is no, 1 is yes"
+	default 0
 
 config MATRIX_LAYOUT_SHIFT
-	bool "1.25 and 1.75 Shifts on row 2"
-	default n
+	int "1.25 and 1.75 Shifts on row 2, 0 is no, 1 is yes"
+	default 0
 
 config MATRIX_LAYOUT_BOTTOM
 	int "Bottom row layout: 1) 1-1-1 ; 2) 2.00-1 ; 3) 1.5-1.5"
