@@ -23,6 +23,7 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
 
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
     lv_obj_set_style_local_border_color(widget->obj, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_THEME_DEFAULT_COLOR_SECONDARY);
+    lv_obj_set_style_local_border_blend_mode(widget->obj, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_BLEND_MODE_ADDITIVE);
 
     lv_obj_t* top_half = lv_obj_create(widget->obj, NULL);
     lv_obj_set_size(top_half, 48, 32); 
