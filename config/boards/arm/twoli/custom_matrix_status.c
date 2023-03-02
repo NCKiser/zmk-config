@@ -17,38 +17,25 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
 
-//static lv_obj_t* top_half;
-if (CONFIG_MATRIX_LAYOUT_ISO) {
-    static lv_obj_t* btn1 = NULL
-    static lv_obj_t* btnISO = NULL
-    static lv_obj_t* btn5 = NULL
-    static lv_obj_t* btn7 = NULL
-    static lv_obj_t* btn7a = NULL
-} else {
-    static lv_obj_t* btn1 = NULL
-    static lv_obj_t* btn2 = NULL
-    static lv_obj_t* btn3 = NULL
-    static lv_obj_t* btn5 = NULL
-    static lv_obj_t* btn6 = NULL
-    static lv_obj_t* btn7 = NULL
-}
-//static lv_obj_t* bottom_half;
-if (CONFIG_MATRIX_LAYOUT_SHIFT) {
-    static lv_obj_t* btn9 = NULL
-    static lv_obj_t* btn11 = NULL
-} else {
-    static lv_obj_t* btn9 = NULL
-    static lv_obj_t* btn10 = NULL
-    static lv_obj_t* btn11 = NULL
-}
-if (CONFIG_MATRIX_LAYOUT_BOTTOM == 1) {
-    static lv_obj_t* btn13 = NULL
-    static lv_obj_t* btn14 = NULL
-    static lv_obj_t* btn15 = NULL
-} else {
-    static lv_obj_t* btn13 = NULL
-    static lv_obj_t* btn15 = NULL
-}
+static lv_obj_t* btnISO = NULL
+
+static lv_obj_t* btn7a = NULL
+
+static lv_obj_t* btn1 = NULL
+static lv_obj_t* btn2 = NULL
+static lv_obj_t* btn3 = NULL
+static lv_obj_t* btn5 = NULL
+static lv_obj_t* btn6 = NULL
+static lv_obj_t* btn7 = NULL
+
+static lv_obj_t* btn9 = NULL
+static lv_obj_t* btn10 = NULL
+static lv_obj_t* btn11 = NULL
+
+static lv_obj_t* btn13 = NULL
+static lv_obj_t* btn14 = NULL
+static lv_obj_t* btn15 = NULL
+
 
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
     widget->obj = lv_obj_create(parent, NULL);
