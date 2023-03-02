@@ -19,17 +19,12 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
     widget->obj = lv_btn_create(parent, NULL);
 
-    theme = lv_theme_mono_init(0, NULL);
-    lv_theme_set_current(theme);
-
     // set the size of the button
     lv_obj_set_size(widget->obj, 30, 12); 
 
     // set the text for the button label
     lv_obj_t* label = lv_label_create(btn, NULL);
     lv_label_set_text(label, "->");
-
-    lv_obj_add_style(widget->obj, LV_OBJ_PART_MAIN, &theme);
 
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
 
