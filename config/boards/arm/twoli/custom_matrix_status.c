@@ -21,11 +21,11 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget, lv_obj_t *parent) {
     widget->obj = lv_btn_create(parent, NULL);
 
-    lv_style_set_bg_color(&button_style, LV_STATE_DEFAULT, LV_COLOR_BLACK);
-    lv_style_set_bg_color(&button_style, LV_STATE_PRESSED, LV_COLOR_WHITE);
-    lv_style_set_border_color(&button_style, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_bg_color(&button_style, LV_STATE_DEFAULT, 0);
+    lv_style_set_bg_color(&button_style, LV_STATE_PRESSED, 1);
+    lv_style_set_border_color(&button_style, LV_STATE_DEFAULT, 1);
     lv_style_set_border_width(&button_style, LV_STATE_DEFAULT, 2);
-    lv_style_set_border_color(&button_style, LV_STATE_PRESSED, LV_COLOR_WHITE);
+    lv_style_set_border_color(&button_style, LV_STATE_PRESSED, 0);
     lv_style_set_border_width(&button_style, LV_STATE_PRESSED, 2);
 
     lv_obj_set_size(widget->obj, 48, 64);
