@@ -30,6 +30,10 @@ choice ZMK_DISPLAY_STATUS_SCREEN
 
 endchoice
 
+config CUSTOM_WIDGET_MATRIX_STATUS
+	bool "Use the custom matrix status widget"
+	default y
+
 config CUSTOM_WIDGET_BATTERY_STATUS
 	bool "Use a custom battery status widget"
 	default y
