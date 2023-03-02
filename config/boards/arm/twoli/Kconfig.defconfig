@@ -33,6 +33,7 @@ endchoice
 config CUSTOM_WIDGET_MATRIX_STATUS
 	bool "Use the custom matrix status widget"
 	default y
+	select LVGL_USE_CONT
 	select LVGL_USE_BTN
 	select LVGL_USE_IMG
 	select LVGL_USE_BTNMATRIX
