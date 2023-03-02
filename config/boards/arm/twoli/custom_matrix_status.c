@@ -25,7 +25,7 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     lv_obj_set_style_local_border_width(widget->obj, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0);
     lv_obj_set_style_local_radius(widget->obj, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 005);
 
-    global global lv_obj_t* top_half = lv_obj_create(widget->obj, NULL);
+    global lv_obj_t* top_half = lv_obj_create(widget->obj, NULL);
     lv_obj_set_size(top_half, 48, 32); 
     lv_obj_align(top_half, NULL, LV_ALIGN_IN_TOP_MID, 0, 0);
     lv_obj_set_style_local_border_width(top_half, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0);
