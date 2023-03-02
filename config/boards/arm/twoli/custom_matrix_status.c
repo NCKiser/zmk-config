@@ -25,6 +25,8 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     lv_style_set_bg_color(&button_style, LV_STATE_PRESSED, LV_COLOR_WHITE);
     lv_style_set_border_color(&button_style, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     lv_style_set_border_width(&button_style, LV_STATE_DEFAULT, 2);
+    lv_style_set_border_color(&button_style, LV_STATE_PRESSED, LV_COLOR_WHITE);
+    lv_style_set_border_width(&button_style, LV_STATE_PRESSED, 2);
 
     lv_obj_set_size(widget->obj, 48, 64);
     lv_obj_add_style(widget->obj, LV_OBJ_PART_MAIN, &button_style);
