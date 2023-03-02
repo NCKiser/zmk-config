@@ -200,7 +200,7 @@ void set_matrix_state(struct custom_widget_matrix_status *widget, struct zmk_pos
 }
 
 int matrix_status_listener(const zmk_event_t *eh) {
-    struct custom_widget_matrix_status *widget
+    struct custom_widget_matrix_status *widget;
     struct zmk_position_state_changed *ev = as_zmk_position_state_changed(eh);
     SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_matrix_state(widget, ev); }
     return ZMK_EV_EVENT_BUBBLE;
