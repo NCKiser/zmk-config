@@ -16,9 +16,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #if IS_ENABLED(CONFIG_CUSTOM_WIDGET_BATTERY_STATUS)
 #include "custom_battery_status.h"
-
 static struct custom_widget_battery_status custom_battery_status_widget;
-
 #endif
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_BATTERY_STATUS)
@@ -50,6 +48,7 @@ lv_obj_t *zmk_display_status_screen() {
     custom_widget_battery_status_init(&custom_battery_status_widget, screen);
     lv_obj_align(custom_widget_battery_status_obj(&custom_battery_status_widget), NULL, LV_ALIGN_IN_LEFT_MID,
                  0, 0);
+#endif
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_BATTERY_STATUS)
     zmk_widget_battery_status_init(&battery_status_widget, screen);
