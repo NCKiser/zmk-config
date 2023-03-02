@@ -32,7 +32,7 @@ int custom_widget_matrix_status_init(struct custom_widget_matrix_status *widget,
     lv_obj_add_style(widget->obj, LV_OBJ_PART_MAIN, &button_style);
 
     lv_btn_set_checkable(widget->obj, true);
-    lv_btn_set_state(widget->obj, LV_BTN_STATE_PRESSED);
+    lv_btn_set_state(widget->obj, LV_BTN_STATE_RELEASED);
 
     lv_label_set_text(lv_label_create(widget->obj, NULL), "btn");
     lv_obj_align(widget->obj, NULL, LV_ALIGN_IN_RIGHT_MID, 0, 0);
