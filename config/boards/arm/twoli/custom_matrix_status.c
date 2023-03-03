@@ -184,19 +184,45 @@ lv_obj_t *custom_widget_matrix_status_obj(struct custom_widget_matrix_status *wi
 }
 
 void set_matrix_state(struct custom_widget_matrix_status *widget, struct zmk_position_state_changed *ev) {
-    if (btn1 != NULL) { lv_obj_set_style_local_bg_color(btn1, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 0) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn2 != NULL) { lv_obj_set_style_local_bg_color(btn2, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 1) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn3 != NULL) { lv_obj_set_style_local_bg_color(btn3, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 2) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn5 != NULL) { lv_obj_set_style_local_bg_color(btn5, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 4) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn6 != NULL) { lv_obj_set_style_local_bg_color(btn6, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 5) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn7 != NULL) { lv_obj_set_style_local_bg_color(btn7, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 6) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn7a != NULL) { lv_obj_set_style_local_bg_color(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 6) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn9 != NULL) { lv_obj_set_style_local_bg_color(btn9, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 8) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn10 != NULL) { lv_obj_set_style_local_bg_color(btn10, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 9) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn11 != NULL) { lv_obj_set_style_local_bg_color(btn11, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 10) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn13 != NULL) { lv_obj_set_style_local_bg_color(btn13, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 12) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn14 != NULL) { lv_obj_set_style_local_bg_color(btn14, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 13) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
-    if (btn15 != NULL) { lv_obj_set_style_local_bg_color(btn15, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, (ev->state && (ev->position == 14) ) ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+    switch(ev->position) {
+        case 0 :
+            if (btn1 != NULL) { lv_obj_set_style_local_bg_color(btn1, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 1 :
+            if (btn2 != NULL) { lv_obj_set_style_local_bg_color(btn2, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 2 :
+            if (btn3 != NULL) { lv_obj_set_style_local_bg_color(btn3, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 4 :
+            if (btn5 != NULL) { lv_obj_set_style_local_bg_color(btn5, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 5 :
+            if (btn6 != NULL) { lv_obj_set_style_local_bg_color(btn6, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 6 :
+            if (btn7 != NULL) { lv_obj_set_style_local_bg_color(btn7, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            if (btn7a != NULL) { lv_obj_set_style_local_bg_color(btn7a, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 8 :
+            if (btn9 != NULL) { lv_obj_set_style_local_bg_color(btn9, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 9 :
+            if (btn10 != NULL) { lv_obj_set_style_local_bg_color(btn10, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 10 :
+            if (btn11 != NULL) { lv_obj_set_style_local_bg_color(btn11, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 12 :
+            if (btn13 != NULL) { lv_obj_set_style_local_bg_color(btn13, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 13 :
+            if (btn14 != NULL) { lv_obj_set_style_local_bg_color(btn14, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+        case 14 :
+            if (btn15 != NULL) { lv_obj_set_style_local_bg_color(btn15, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, ev->state ? LV_THEME_DEFAULT_COLOR_PRIMARY : LV_THEME_DEFAULT_COLOR_SECONDARY); }
+            break;
+    }
 }
 
 int matrix_status_listener(const zmk_event_t *eh) {
