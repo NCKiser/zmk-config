@@ -7,7 +7,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Home {
             label = "Home";
             bindings = <
         &kp N7   &kp N8  &kp N9  &kp C_MUTE
@@ -19,7 +19,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_1 {
+        mmm {
             label = "BT";
             bindings = <
  &bootloader  &trans   &trans  &kp ESC
@@ -29,6 +29,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        Alpha {
+            bindings = <
+ &kp A  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+            >;
         };
     };
 };
