@@ -19,7 +19,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        mmm {
+        New {
             label = "BT";
             bindings = <
  &bootloader  &trans   &trans  &kp ESC
