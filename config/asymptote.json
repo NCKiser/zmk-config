@@ -1,4 +1,6 @@
 {
+  "id": "asymptote",
+  "name": "asymptote",
   "layouts": {
     "default": {
       "layout": [
@@ -14,7 +16,6 @@
         { "label":      "O", "row": 0, "col": 10, "x":     9, "y": 0 },
         { "label":      "P", "row": 0, "col": 11, "x":    10, "y": 0 },
         { "label":   "BSPC", "row": 0, "col": 12, "x":    11, "y": 0, "w": 1.75 },
-      
         { "label":   "Ctrl", "row": 1, "col":  0, "x":     0, "y": 1, "w": 1.25 },
         { "label":      "A", "row": 1, "col":  1, "x":  1.25, "y": 1 },
         { "label":      "S", "row": 1, "col":  2, "x":  2.25, "y": 1 },
@@ -27,7 +28,6 @@
         { "label":      "L", "row": 1, "col": 10, "x":  9.25, "y": 1 },
         { "label":      ";", "row": 1, "col": 11, "x": 10.25, "y": 1 },
         { "label":      "'", "row": 1, "col": 12, "x": 11.25, "y": 1, "w":  1.5 },
-      
         { "label": "LShift", "row": 2, "col":  0, "x":     0, "y": 2, "w": 1.75 },
         { "label":      "Z", "row": 2, "col":  1, "x":  1.75, "y": 2 },
         { "label":      "X", "row": 2, "col":  2, "x":  2.75, "y": 2 },
@@ -40,14 +40,14 @@
         { "label":      ".", "row": 2, "col": 10, "x":  9.75, "y": 2 },
         { "label":      "/", "row": 2, "col": 11, "x": 10.75, "y": 2 },
         { "label":    "Esc", "row": 2, "col": 12, "x": 11.75, "y": 2 },
-      
         { "label":    "GUI", "row": 3, "col":  3, "x":     1, "y": 3 },
         { "label":    "LWR", "row": 3, "col":  4, "x":     3, "y": 3 },
         { "label":    "SPC", "row": 3, "col":  5, "x":     5, "y": 3 },
         { "label":    "ENT", "row": 3, "col":  7, "x":     7, "y": 3 },
         { "label":    "RSE", "row": 3, "col":  8, "x":     9, "y": 3 },
-        { "label":    "ALT", "row": 3, "col":  9, "x":     11, "y": 3 }
+        { "label":    "ALT", "row": 3, "col":  9, "x":    11, "y": 3 }
       ]
     }
-  }
+  },
+  "sensors": []
 }
