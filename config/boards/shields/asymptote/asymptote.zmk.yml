@@ -1,6 +1,6 @@
 file_format: "1"
-id: twister
-name: TWISTER
+id: asymptote
+name: Asymptote
 type: shield
 url: https://www.kiserdesigns.com/product/twister
 requires: [pro_micro]
