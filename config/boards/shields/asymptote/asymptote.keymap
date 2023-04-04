@@ -30,7 +30,7 @@
     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       
     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp RET     
     &mt LSHFT Z &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp UP      &mt RSHFT DOT
-    &kp LCTRL   &kp LGUI    &kp LALT    &none     &lt L_LYR BSPC  &lt R_LYR SPACE  &lt S_LAYER LEFT    &kp DOWN    &kp RIGHT &kp I       &kp O       &kp P
+    &kp LCTRL   &kp LGUI    &kp LALT    &none     &lt L_LYR BSPC  &lt R_LYR SPACE  &lt S_LYR LEFT    &kp DOWN    &kp RIGHT &kp I       &kp O       &kp P
             >;
         };
 	
