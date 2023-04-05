@@ -18,6 +18,9 @@
 };
 
 / {
+    chosen {
+        zmk,matrix_transform = &asymptote_g;
+    };
     keymap {
         compatible = "zmk,keymap";
 
