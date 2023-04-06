@@ -1,0 +1,8 @@
+file_format: "1"
+id: hang10
+name: Hang10
+type: shield
+url: https://www.kiserdesigns.com/product/twister
+requires: [seeed_xiao]
+features:
+  - keys
