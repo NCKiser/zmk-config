@@ -50,7 +50,7 @@
 
         Layer__3 {
             bindings = <
-&bootloader  &trans  &trans  &reset  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans
      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
      &trans  &trans  &trans          &trans  &trans          &trans  &trans  &trans
