@@ -1,5 +1,5 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_ASYMPTOTE
-   def_bool $(shields_list_contains,asymptote)
+config SHIELD_TOF
+   def_bool $(shields_list_contains,tof)
