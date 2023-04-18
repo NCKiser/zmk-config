@@ -33,11 +33,6 @@
             bindings = <&kp TAB>;
             key-positions = <3 4>;
         };
-
-        pairing {
-            bindings = <&bt BT_CLR>;
-            key-positions = <7 8 9>;
-        };
     };
 
     keymap {
