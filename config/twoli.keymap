@@ -22,10 +22,10 @@
         New {
             label = "BT";
             bindings = <
- &bootloader  &trans   &trans  &kp ESC
-&out OUT_TOG  &trans  &kp RET    &none
-  &bt BT_CLR  &trans   &reset    &none
-  &bt BT_NXT  &trans   &trans    &none
+ &bootloader  &trans      &trans  &kp ESC
+&out OUT_TOG  &trans     &kp RET    &none
+  &bt BT_CLR  &trans  &sys_reset    &none
+  &bt BT_NXT  &trans      &trans    &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
