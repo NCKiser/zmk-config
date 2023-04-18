@@ -1,6 +1,6 @@
 file_format: "1"
-id: asymptote
-name: Asymptote
+id: tof
+name: The Other 40%
 type: shield
 url: https://www.kiserdesigns.com/product/twister
 requires: [seeed_xiao]

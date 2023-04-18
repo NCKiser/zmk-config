@@ -1,9 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_ASYMPTOTE
+if SHIELD_TOF
 
 config ZMK_KEYBOARD_NAME
-    default "Asymptote"
+    default "The Other 40%"
 
 endif
