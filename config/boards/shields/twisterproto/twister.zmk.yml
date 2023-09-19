@@ -1,8 +1,0 @@
-file_format: "1"
-id: twister
-name: TWISTER
-type: shield
-url: https://www.kiserdesigns.com/product/twister
-requires: [pro_micro]
-features:
-  - keys
