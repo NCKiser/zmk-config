@@ -128,6 +128,48 @@
             key-positions = <0 1 2 3>;
             layers = <0>;
         };
+
+        combo_ret {
+            bindings = <&kp ENTER>;
+            key-positions = <3 7>;
+            layers = <0>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <4 2 3>;
+            layers = <0>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <4 1 2 3>;
+            layers = <0>;
+        };
+
+        combo_sk_ctrl {
+            bindings = <&sk LCTRL>;
+            key-positions = <0 7>;
+            layers = <0>;
+        };
+
+        combo_sk_gui {
+            bindings = <&sk LGUI>;
+            key-positions = <0 6>;
+            layers = <0>;
+        };
+
+        combo_sk_alt {
+            bindings = <&sk LALT>;
+            key-positions = <0 5>;
+            layers = <0>;
+        };
+
+        combo_sk_shft {
+            bindings = <&sk LSHFT>;
+            key-positions = <0 1 2 7>;
+            layers = <0>;
+        };
     };
 
     keymap {
