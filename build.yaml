@@ -21,4 +21,4 @@ include:
 #    shield: twister
 #  - board: ble_chiffre
   - board: seeeduino_xiao_ble
-    shield: hang10
+    shield: smidge
