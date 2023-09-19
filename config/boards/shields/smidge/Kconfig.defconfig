@@ -1,9 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_HANG10
+if SHIELD_SMIDGE
 
 config ZMK_KEYBOARD_NAME
-    default "Hang10"
+    default "Smidge"
 
 endif

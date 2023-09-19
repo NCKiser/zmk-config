@@ -2,7 +2,7 @@ file_format: "1"
 id: hang10
 name: Hang10
 type: shield
-url: https://www.kiserdesigns.com/product/twister
+url: https://www.kiserdesigns.com/product/smidge
 requires: [seeed_xiao]
 features:
   - keys
