@@ -201,6 +201,30 @@
             key-positions = <2 5>;
             layers = <0>;
         };
+
+        combo_comma {
+            bindings = <&kp COMMA>;
+            key-positions = <5 3>;
+            layers = <>;
+        };
+
+        combo_dot {
+            bindings = <&kp DOT>;
+            key-positions = <3 6>;
+            layers = <>;
+        };
+
+        combo_apos {
+            bindings = <&kp APOS>;
+            key-positions = <5 6 3>;
+            layers = <0>;
+        };
+
+        combo_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <3 4>;
+            layers = <>;
+        };
     };
 
     keymap {
