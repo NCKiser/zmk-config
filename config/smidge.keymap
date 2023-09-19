@@ -24,16 +24,19 @@
         b {
             bindings = <&kp B>;
             key-positions = <4 7>;
+            layers = <0>;
         };
 
         c {
             bindings = <&kp C>;
             key-positions = <6 7>;
+            layers = <0>;
         };
 
         d {
             bindings = <&kp D>;
             key-positions = <1 2 3>;
+            layers = <0>;
         };
     };
 
