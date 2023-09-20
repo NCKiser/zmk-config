@@ -152,7 +152,7 @@
         };
 
         combo_sk_ctrl {
-            bindings = <&sk LCTRL>;
+            bindings = <&ht_kp_sk LCTRL LCTRL>;
             key-positions = <0 7>;
             layers = <0>;
         };
@@ -164,13 +164,13 @@
         };
 
         combo_sk_alt {
-            bindings = <&sk LALT>;
+            bindings = <&ht_kp_sk LALT LALT>;
             key-positions = <0 5>;
             layers = <0>;
         };
 
         combo_sk_shft {
-            bindings = <&sk LSHFT>;
+            bindings = <&ht_kp_sk LSHFT LSHFT>;
             key-positions = <0 1 2 7>;
             layers = <0>;
         };
@@ -318,9 +318,9 @@
 
         Base {
             bindings = <
-  &lt 2 S  &kp T  &kp R      &lt 1 A
-  &lt 4 O  &kp I  &kp Y      &lt 3 E
-                  &kp LSHFT  &kp SPACE  &trans
+  &lt 2 S  &kp T  &kp R                  &lt 1 A
+  &lt 4 O  &kp I  &kp Y                  &lt 3 E
+                  &ht_kp_sk LSHFT LSHFT  &kp SPACE  &trans
             >;
         };
 
