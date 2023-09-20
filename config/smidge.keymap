@@ -311,6 +311,26 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+        skq: skq {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SKQ";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            ignore-modifiers;
+            release-after-ms = <2500>;
+        };
+        ht_kp_skq: ht_kp_skq {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_SKQ";
+            bindings =
+                <&kp>,
+                <&skq>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -318,9 +338,9 @@
 
         Base {
             bindings = <
-  &lt 2 S  &kp T  &kp R                  &lt 1 A
-  &lt 4 O  &kp I  &kp Y                  &lt 3 E
-                  &ht_kp_sk LSHFT LSHFT  &kp SPACE  &trans
+  &lt 2 S  &kp T  &kp R                   &lt 1 A
+  &lt 4 O  &kp I  &kp Y                   &lt 3 E
+                  &ht_kp_skq LSHFT LSHFT  &kp SPACE  &kp BACKSPACE
             >;
         };
 
