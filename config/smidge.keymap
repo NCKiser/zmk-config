@@ -158,7 +158,7 @@
         };
 
         combo_sk_gui {
-            bindings = <&sk LGUI>;
+            bindings = <&ht_kp_sk LEFT_GUI LEFT_GUI>;
             key-positions = <0 6>;
             layers = <0>;
         };
@@ -296,6 +296,20 @@
             bindings = <&tog 7>;
             key-positions = <4 5 6 7 9>;
             layers = <0 7>;
+        };
+    };
+
+    behaviors {
+        ht_kp_sk: ht_kp_sk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_SK";
+            bindings =
+                <&kp>,
+                <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
     };
 
