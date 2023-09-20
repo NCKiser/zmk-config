@@ -306,7 +306,7 @@
             bindings = <
   &lt 2 S  &kp T  &kp R      &lt 1 A
   &lt 4 O  &kp I  &kp Y      &lt 3 E
-                  &kp LSHFT  &kp SPACE  &mo 6
+                  &kp LSHFT  &kp SPACE  &trans
             >;
         };
 
@@ -336,7 +336,7 @@
 
         Arrows {
             bindings = <
-  &trans  &trans  &kp UP    &kp LEFT
+  &sl 6   &trans  &kp UP    &kp LEFT
   &trans  &trans  &kp DOWN  &kp RIGHT
                   &trans    &trans     &mo 5
             >;
@@ -352,9 +352,9 @@
 
         System {
             bindings = <
-  &bt BT_CLR    &trans        &trans        &out OUT_TOG
+  &trans        &trans        &trans        &out OUT_TOG
   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
-                              &bootloader   &trans        &trans
+                              &bootloader   &trans        &bt BT_CLR
             >;
         };
 
