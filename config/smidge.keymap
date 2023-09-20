@@ -255,6 +255,48 @@
             key-positions = <5 6>;
             layers = <2>;
         };
+
+        combo_f7 {
+            bindings = <&kp F7>;
+            key-positions = <2 3>;
+            layers = <8>;
+        };
+
+        combo_f8 {
+            bindings = <&kp F8>;
+            key-positions = <1 2>;
+            layers = <8>;
+        };
+
+        combo_f9 {
+            bindings = <&kp F9>;
+            key-positions = <6 7>;
+            layers = <8>;
+        };
+
+        combo_f10 {
+            bindings = <&kp F10>;
+            key-positions = <5 6>;
+            layers = <8>;
+        };
+
+        combo_f11 {
+            bindings = <&kp F11>;
+            key-positions = <1 2 3>;
+            layers = <8>;
+        };
+
+        combo_f12 {
+            bindings = <&kp F12>;
+            key-positions = <5 6 7>;
+            layers = <8>;
+        };
+
+        combo_tg_game {
+            bindings = <&tog 7>;
+            key-positions = <4 5 6 7 9>;
+            layers = <0 7>;
+        };
     };
 
     keymap {
@@ -264,23 +306,23 @@
             bindings = <
   &lt 2 S  &kp T  &kp R      &lt 1 A
   &lt 4 O  &kp I  &kp Y      &lt 3 E
-                  &kp LSHFT  &kp SPACE  &mo 7
+                  &kp LSHFT  &kp SPACE  &mo 6
             >;
         };
 
         Brackets {
             bindings = <
-  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-  &kp LEFT_BRACE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
-                                         &bootloader            &trans  &trans
+  &kp GREATER_THAN  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans
+  &kp LESS_THAN     &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &trans
+                                       &bootloader            &trans  &trans
             >;
         };
 
         Numbers {
             bindings = <
-  &trans  &kp N3  &kp N2   &kp N1
-  &trans  &kp N6  &kp N5   &kp N4
-                  &kp DOT  &kp FSLH  &kp MINUS
+  &trans  &kp N3  &kp N2     &kp N1
+  &trans  &kp N6  &kp N5     &kp N4
+                  &kp MINUS  &kp DOT  &lt 8 SLASH
             >;
         };
 
@@ -292,27 +334,19 @@
             >;
         };
 
-        FastNav {
+        Arrows {
             bindings = <
-  &trans  &trans    &kp UP    &trans
-  &trans  &kp LEFT  &kp DOWN  &kp RIGHT
-                    &trans    &trans     &trans
+  &trans  &trans  &kp UP    &kp LEFT
+  &trans  &trans  &kp DOWN  &kp RIGHT
+                  &trans    &trans     &mo 5
             >;
         };
 
         Navigation {
             bindings = <
-  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans
-            >;
-        };
-
-        Mouse {
-            bindings = <
-  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans
+  &trans  &trans  &kp PG_UP  &kp HOME
+  &trans  &trans  &kp PG_DN  &kp END
+                  &trans     &trans    &trans
             >;
         };
 
@@ -326,8 +360,16 @@
 
         Gaming {
             bindings = <
-  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans
+  &kp LSHFT  &kp Q  &kp W    &kp E
+  &kp LCTRL  &kp A  &kp S    &kp D
+                    &kp ESC  &kp SPACE  &kp TAB
+            >;
+        };
+
+        Function {
+            bindings = <
+  &trans  &kp F3  &kp F2  &kp F1
+  &trans  &kp F6  &kp F5  &kp F4
                   &trans  &trans  &trans
             >;
         };
