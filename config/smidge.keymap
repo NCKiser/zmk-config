@@ -331,6 +331,14 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+        q_esc_mo3: q_esc_mo3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Q_ESC_MO3";
+            #binding-cells = <0>;
+            bindings =
+                <&lt 3 Q>,
+                <&kp ESC>;
+        };
     };
 
     keymap {
@@ -370,9 +378,9 @@
 
         Arrows {
             bindings = <
-  &sl 6   &trans  &kp UP    &kp LEFT
-  &trans  &trans  &kp DOWN  &kp RIGHT
-                  &trans    &trans     &mo 5
+  &sl 6   &q_esc_mo3  &kp UP    &kp LEFT
+  &trans  &trans      &kp DOWN  &kp RIGHT
+                      &trans    &trans     &mo 5
             >;
         };
 
