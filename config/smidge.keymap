@@ -352,8 +352,8 @@
 
         Base {
             bindings = <
-  &lt 2 S  &kp T  &kp R                   &lt 1 A
-  &lt 4 O  &kp I  &kp Y                   &lt 3 E
+  &lt 2 S  &kp T  &kp R                   &lt 1 O
+  &lt 4 A  &kp I  &kp Y                   &lt 3 E
                   &ht_kp_skq LSHFT LSHFT  &kp SPACE  &kp BACKSPACE
             >;
         };
