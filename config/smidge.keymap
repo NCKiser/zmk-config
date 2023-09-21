@@ -297,6 +297,12 @@
             key-positions = <4 5 6 7 9>;
             layers = <0 7>;
         };
+
+        combo_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <4 7>;
+            layers = <6>;
+        };
     };
 
     behaviors {
@@ -378,9 +384,9 @@
 
         Arrows {
             bindings = <
-  &sl 6   &q_esc_mo3  &kp UP    &kp LEFT
-  &trans  &trans      &kp DOWN  &kp RIGHT
-                      &trans    &trans     &mo 5
+  &trans  &trans  &kp UP    &kp LEFT
+  &trans  &trans  &kp DOWN  &kp RIGHT
+                  &mo 6     &trans     &mo 5
             >;
         };
 
@@ -394,9 +400,9 @@
 
         System {
             bindings = <
-  &trans        &trans        &trans        &out OUT_TOG
+  &bt BT_CLR    &trans        &trans        &out OUT_TOG
   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
-                              &bootloader   &trans        &bt BT_CLR
+                              &trans        &trans        &trans
             >;
         };
 
