@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/xqinx
   projects:
     - name: zmk
-      remote: https://github.com/xqinx
+      remote: xqinx
       revision: thb
       import: app/west.yml
   self:
