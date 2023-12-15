@@ -1,6 +1,6 @@
 manifest:
   remotes:
-    - name: zmk-firmware
+    - name: xqinx
       url-base: https://github.com/xqinx
   projects:
     - name: zmk
