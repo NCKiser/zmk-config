@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmk-firmware
-      url-base: https://github.com/xqinx/zmk/tree
+      url-base: https://github.com/xqinx
   projects:
-    - name: thb
-      remote: https://github.com/xqinx/zmk/tree
-      revision: main
+    - name: zmk
+      remote: https://github.com/xqinx
+      revision: thb
       import: app/west.yml
   self:
     path: config
