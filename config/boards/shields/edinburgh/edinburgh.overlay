@@ -66,9 +66,9 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(5,0) RC(5,1) RC(5,2) RC(5,3) 
             ;
 
         row-gpios
-            = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 1 /*This is the pin if you don't bodge-wire 20*/ (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 0 /*This is the pin if you don't bodge-wire 19*/ (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 10 /*This is the pin if you don't bodge-wire 20*/ (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 19 /*This is the pin if you don't bodge-wire 19*/ (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -81,26 +81,13 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(5,0) RC(5,1) RC(5,2) RC(5,3) 
         sensors = <&joystickx &joysticky>;
     };
 
-    joystickx: joystickx {
-        compatible = "joystick";
-        label = "JOYSTICKX";
-	io-channels = <&adc 0>;
-	status = "okay";
-	resolution = <512>;
-	frequency = <50>;
-	min_on = <256>;
-	reverse;
-    };
-
-    joysticky: joysticky {
-        compatible = "joystick";
-        label = "JOYSTICKY";
-	io-channels = <&adc 5>;
-	status = "okay";
-	resolution = <512>;
-	frequency = <50>;
-	min_on = <256>;
-	reverse;
+    joystick0: thb {
+        compatible = "ck,thb";
+        label = "JOYSTICK";
+        io-channels = <&adc 5>, <&adc 7>;
+        io-channel-names = "X-AXIS", "Y-AXIS";
+        max-mv = <1650>;
+        status = "disabled";
     };
 
 };

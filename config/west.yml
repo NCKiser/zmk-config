@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: codeandr3w
-      url-base: https://github.com/codeandr3w
+    - name: zmk-firmware
+      url-base: https://github.com/xqinx/zmk/tree
   projects:
-    - name: zmk-joystick
-      remote: codeandr3w
+    - name: thb
+      remote: https://github.com/xqinx/zmk/tree
       revision: main
       import: app/west.yml
   self:
