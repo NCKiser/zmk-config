@@ -1,9 +1,9 @@
 manifest:
   remotes:
-    - name: zmk-joystick
+    - name: codeandr3w
       url-base: https://github.com/codeandr3w/zmk-joystick
   projects:
-    - name: zmk
+    - name: codeandr3w
       remote: zmk-joystick
       revision: main
       import: app/west.yml
