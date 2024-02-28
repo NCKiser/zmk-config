@@ -9,17 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&mt {
-    tapping-term-ms = <200>;
-};
+&mt { tapping-term-ms = <200>; };
 
-&lt {
-    quick-tap-ms = <400>;
-};
+&lt { quick-tap-ms = <400>; };
 
-&sk {
-    release-after-ms = <2500>;
-};
+&sk { release-after-ms = <2500>; };
 
 / {
     combos {
@@ -309,14 +303,13 @@
         ht_kp_sk: ht_kp_sk {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_SK";
-            bindings =
-                <&kp>,
-                <&sk>;
+            bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
         skq: skq {
             compatible = "zmk,behavior-sticky-key";
             label = "SKQ";
@@ -326,24 +319,22 @@
             ignore-modifiers;
             release-after-ms = <2500>;
         };
+
         ht_kp_skq: ht_kp_skq {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_SKQ";
-            bindings =
-                <&kp>,
-                <&skq>;
+            bindings = <&kp>, <&skq>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
         q_esc_mo3: q_esc_mo3 {
             compatible = "zmk,behavior-tap-dance";
             label = "Q_ESC_MO3";
             #binding-cells = <0>;
-            bindings =
-                <&lt 3 Q>,
-                <&kp ESC>;
+            bindings = <&lt 3 Q>, <&kp ESC>;
         };
     };
 
@@ -354,7 +345,7 @@
             bindings = <
   &lt 2 S  &kp T  &kp R                   &lt 1 O
   &lt 4 A  &kp I  &kp Y                   &lt 3 E
-                  &ht_kp_skq LSHFT LSHFT  &kp SPACE  &kp BACKSPACE
+                  &ht_kp_skq LSHFT LSHFT  &lt 3 SPACE  &kp BACKSPACE
             >;
         };
 
